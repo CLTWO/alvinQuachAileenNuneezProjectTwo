@@ -26,13 +26,14 @@ basketApp.getPlayerInfo = function (datafromApi) {
     const playerObj = datafromApi.data;
     playerObj.map(function (playerStats) {
         console.log(playerStats)
-        // const { ast, blk } = playerStats
-        // console.log(ast, blk);
+        const { ast, blk, pts, reb, stl } = playerStats
+        console.log(ast, blk, pts, reb, stl);
+
         const { first_name, last_name } = playerStats.player
         console.log(first_name, last_name);
 
-
-
+        const { full_name } = playerStats.team
+        console.log(full_name)
     });
 }
 
