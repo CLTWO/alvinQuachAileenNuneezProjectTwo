@@ -4,13 +4,13 @@ const basketApp = {};
 //save foundation URL in variable  
 basketApp.apiUrl = 'https://www.balldontlie.io/api/v1/stats'
 
-
 //function to request information from the API 
 basketApp.getStats = function () {
     const url = new URL(basketApp.apiUrl)
     url.search = new URLSearchParams({
         start_date: '2021-10-18',
-        page: 1,
+        per_page: 100,
+        'player_ids[]': [237],
     })
     fetch(url)
         .then(function (response) {
@@ -25,7 +25,7 @@ basketApp.getStats = function () {
 basketApp.getPlayerInfo = function (datafromApi) {
     const playerObj = datafromApi.data;
     playerObj.map(function (playerStats) {
-        console.log(playerStats)
+        // console.log(playerStats); 
         const { ast, blk, pts, reb, stl } = playerStats
         console.log(ast, blk, pts, reb, stl);
 
