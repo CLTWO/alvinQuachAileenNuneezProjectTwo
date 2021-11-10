@@ -10,7 +10,7 @@ basketApp.getStats = function () {
     url.search = new URLSearchParams({
         start_date: '2021-10-18',
         per_page: 100,
-        'player_ids[]': [237],
+        'player_ids[]': 237
     })
     fetch(url)
         .then(function (response) {
@@ -27,7 +27,7 @@ basketApp.getPlayerInfo = function (datafromApi) {
     playerObj.forEach(function (playerStats) {
         console.log(playerStats); 
         //creating elements out of our data to append to a page
-        const teamTitle = document.createElement('h3')
+        const teamTitle = document.querySelector('h3')
         teamTitle.innerText = playerStats.team.full_name
 
         const gameDate = document.createElement('li')
@@ -56,7 +56,6 @@ basketApp.getPlayerInfo = function (datafromApi) {
         const gameStats = document.createElement('ul')
         
         const statsPage = document.querySelector('#statsSection')
-        statsPage.appendChild(teamTitle)
         gameStats.appendChild(gameDate)
         gameStats.appendChild(playerPoints)
         gameStats.appendChild(playerRebounds)
