@@ -24,16 +24,46 @@ basketApp.getStats = function () {
 //pull specific information from nested array 
 basketApp.getPlayerInfo = function (datafromApi) {
     const playerObj = datafromApi.data;
-    playerObj.map(function (playerStats) {
-        // console.log(playerStats); 
-        const { ast, blk, pts, reb, stl } = playerStats
-        console.log(ast, blk, pts, reb, stl);
+    playerObj.forEach(function (playerStats) {
+        console.log(playerStats); 
+        //creating elements out of our data to append to a page
+        const teamTitle = document.createElement('h3')
+        teamTitle.innerText = playerStats.team.full_name
 
-        const { first_name, last_name } = playerStats.player
-        console.log(first_name, last_name);
+        const gameDate = document.createElement('li')
+        const uglyDateString = `${playerStats.game.date}`
+        const date = new Date(uglyDateString);
+        const dateOnly = date.toDateString();
+        const humanReadable = new Date(uglyDateString).toDateString();
+        gameDate.innerHTML = `<p>Game date:${humanReadable}</p>`
 
-        const { full_name } = playerStats.team
-        console.log(full_name)
+        const playerPoints = document.createElement('li')
+        playerPoints.innerHTML = `<p>Points:${playerStats.pts}</p>`
+
+        const playerRebounds = document.createElement('li')
+        playerRebounds.innerHTML = `<p>Rebounds:${playerStats.reb}</p>` 
+
+        const playerAssists = document.createElement('li')
+        playerAssists.innerHTML = `<p>Assists:${playerStats.ast}</p>` 
+
+        const playerSteals = document.createElement('li')
+        playerSteals.innerHTML = `<p>Steals:${playerStats.stl}</p>`
+
+        const playerBlocks = document.createElement('li')
+        playerBlocks.innerHTML = `<p>Blocks:${playerStats.blk}</p>` 
+
+        //appending elements to document
+        const gameStats = document.createElement('ul')
+        
+        const statsPage = document.querySelector('#statsSection')
+        statsPage.appendChild(teamTitle)
+        gameStats.appendChild(gameDate)
+        gameStats.appendChild(playerPoints)
+        gameStats.appendChild(playerRebounds)
+        gameStats.appendChild(playerAssists)
+        gameStats.appendChild(playerSteals)
+        gameStats.appendChild(playerBlocks)
+        document.getElementById("statsSection").appendChild(gameStats)
     });
 }
 
