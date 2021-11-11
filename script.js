@@ -26,7 +26,6 @@ basketApp.getStats = function (playerName) {
 basketApp.getPlayerInfo = function (datafromApi) {
     const playerObj = datafromApi.data;
     playerObj.forEach(function (playerStats) {
-        console.log(playerStats);
         //creating elements out of our data to append to a page
         const teamTitle = document.getElementById('teamName')
         teamTitle.textContent = playerStats.team.full_name
