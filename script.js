@@ -24,6 +24,8 @@ basketApp.getStats = function (playerName) {
 //pull specific information from nested array
 basketApp.getPlayerInfo = function (datafromApi) {
   const playerObj = datafromApi.data;
+  const statsPage = document.querySelector("#statsSection");
+  statsPage.textContent = "";
   playerObj.forEach(function (playerStats) {
     const playerId = playerStats.player.id;
     console.log(playerStats.player.id);
@@ -56,7 +58,8 @@ basketApp.getPlayerInfo = function (datafromApi) {
     //appending elements to document
     const gameStats = document.createElement("ul");
 
-    const statsPage = document.querySelector("#statsSection");
+ 
+
     gameStats.appendChild(gameDate);
     gameStats.appendChild(playerPoints);
     gameStats.appendChild(playerRebounds);
@@ -64,7 +67,6 @@ basketApp.getPlayerInfo = function (datafromApi) {
     gameStats.appendChild(playerSteals);
     gameStats.appendChild(playerBlocks);
 
-    statsPage.textContent = "";
     statsPage.appendChild(gameStats);
   });
 };
@@ -83,7 +85,6 @@ basketApp.setupEventListener = function () {
 //create init function in order for app to display JS once it is loaded
 basketApp.init = function () {
   basketApp.setupEventListener();
-  basketApp.getStats();
 };
 
 //Call the init method to kickstart the app
