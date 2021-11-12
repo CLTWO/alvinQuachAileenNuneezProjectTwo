@@ -25,13 +25,21 @@ basketApp.getStats = function (playerName) {
 basketApp.getPlayerInfo = function (datafromApi) {
   const playerObj = datafromApi.data;
   const statsPage = document.querySelector("#statsSection");
+  console.log(datafromApi.data[0].team.full_name)
   statsPage.textContent = "";
+
+  const currentTeamTitle = document.querySelector('.currentTeamName')
+
+  currentTeamTitle.textContent = ''
+
   playerObj.forEach(function (playerStats) {
     const playerId = playerStats.player.id;
     console.log(playerStats.player.id);
     //creating elements out of our data to append to a page
     const teamTitle = document.querySelector(`#player${playerId} h4`);
     teamTitle.textContent = playerStats.team.full_name;
+    teamTitle.className = "currentTeamName"
+    console.log(teamTitle)
 
     const gameDate = document.createElement("li");
     const uglyDateString = `${playerStats.game.date}`;
@@ -58,7 +66,7 @@ basketApp.getPlayerInfo = function (datafromApi) {
     //appending elements to document
     const gameStats = document.createElement("ul");
 
- 
+
 
     gameStats.appendChild(gameDate);
     gameStats.appendChild(playerPoints);
@@ -66,8 +74,9 @@ basketApp.getPlayerInfo = function (datafromApi) {
     gameStats.appendChild(playerAssists);
     gameStats.appendChild(playerSteals);
     gameStats.appendChild(playerBlocks);
-
     statsPage.appendChild(gameStats);
+
+
   });
 };
 
