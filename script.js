@@ -75,7 +75,6 @@ basketApp.setupEventListener = function () {
   const buttons = document.querySelectorAll("button");
   buttons.forEach(function (individualButton) {
     individualButton.addEventListener("click", function (event) {
-      event.preventDefault();
       const userInput = this.value;
       basketApp.getStats(userInput);
     });
