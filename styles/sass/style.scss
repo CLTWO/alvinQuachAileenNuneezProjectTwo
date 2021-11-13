@@ -1,19 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Bungee+Outline&family=Neuton&display=swap'); 
-
-@import 'fonts'; 
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Roboto&display=swap');
+@import 'fonts';
 
 body {
     background-color: orange;
+}
+
+img {
+    height: 50%;
+    width: 70%;
+}
+
+button {
+    display: block;
 }
 
 .playerCards {
     background-color: grey;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    //grid-template: repeat(auto-fill, minmax(300px, 1fr));
     grid-gap: .5rem;
     div {
+        height: 500px;
         border: 2px solid red;
-        border-radius: 5px;
+        border-radius: 10px;
     }
 }
 

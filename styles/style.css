@@ -1,6 +1,23 @@
-@import url("https://fonts.googleapis.com/css2?family=Bungee+Outline&family=Neuton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Monoton&family=Roboto&display=swap");
+h1 {
+  font-family: "Monoton", cursive;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
 body {
   background-color: orange;
+}
+
+img {
+  height: 50%;
+  width: 70%;
+}
+
+button {
+  display: block;
 }
 
 .playerCards {
@@ -10,8 +27,9 @@ body {
   grid-gap: 0.5rem;
 }
 .playerCards div {
+  height: 500px;
   border: 2px solid red;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 .statsSection {
