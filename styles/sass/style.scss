@@ -1,6 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Outline&family=Neuton&display=swap'); 
 
 @import 'fonts'; 
-h2{
-    color: red;
+
+body {
+    background-color: orange;
+}
+
+.playerCards {
+    background-color: grey;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: .5rem;
+    div {
+        border: 2px solid red;
+        border-radius: 5px;
+    }
+}
+
+.statsSection {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 15px;
+    ul {
+        border: 2px solid blue;
+        display: grid;
+    } 
+}
+
+h1 {
+    color: blue;
 }
