@@ -1,5 +1,3 @@
-console.log(document.querySelector("#player115 h4").outerHTML);
-
 //Create Namespace
 const basketApp = {};
 
