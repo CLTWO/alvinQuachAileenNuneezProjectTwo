@@ -5,6 +5,7 @@
 
 body {
     background-color: #B54213; 
+    margin: 0;
 }
 h1{
     margin: 0 auto;
@@ -18,6 +19,9 @@ h1{
     padding: 5px 0;
 }
 footer{
-    width: 100vw;
-    margin-bottom: 0;
+    background-color: #EFE3C6;
+    text-align: center;
+    a{
+        text-decoration: none;
+    }
 }
