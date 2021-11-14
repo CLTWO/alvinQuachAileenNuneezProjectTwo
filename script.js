@@ -44,7 +44,7 @@ basketApp.getPlayerInfo = function (datafromApi) {
     const date = new Date(uglyDateString);
     const dateOnly = date.toDateString();
     const humanReadable = new Date(uglyDateString).toDateString();
-    gameDate.innerHTML = `<p>Game date:${humanReadable}</p>`;
+    gameDate.innerHTML = `<p>Game date: ${humanReadable}</p>`;
 
     const playerPoints = document.createElement("li");
     playerPoints.innerHTML = `<p>Points:${playerStats.pts}</p>`;

@@ -1,10 +1,34 @@
 @import url("https://fonts.googleapis.com/css2?family=Monoton&family=Roboto&display=swap");
-h1 {
-  font-family: "Monoton", cursive;
-}
-
 body {
   font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  font-family: "PepsiCyrLatRegular";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 50px;
+  color: white;
+  text-shadow: -5px 2px 2px black;
+  text-transform: none;
+}
+
+.infoSec p {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.playerCards {
+  color: black;
+  text-shadow: -1px 2px 2px #EF7F4D;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 1.25rem;
+}
+.playerCards button {
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  letter-spacing: 0.25rem;
 }
 
 img {
@@ -13,14 +37,13 @@ img {
 }
 
 .playerCards {
-  background-color: grey;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-gap: 0.5rem;
+  grid-gap: 0.8rem;
 }
 .playerCards div {
-  height: 500px;
-  border: 2px solid red;
+  border: 2px solid #E47041;
+  height: 430px;
   border-radius: 10px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -37,22 +60,54 @@ img {
           flex-direction: column;
 }
 .playerCards button {
+  color: white;
   text-align: center;
   display: block;
+  background-color: black;
+  border: none;
+  border-radius: 10px;
+  padding: 15px;
+}
+.playerCards button:hover {
+  opacity: 0.8;
+}
+
+.playerCards div:hover {
+  outline: 2px solid #E47041;
+}
+
+.giannis h3 {
+  text-align: center;
+}
+.giannis span {
+  display: block;
+}
+
+body {
+  background-color: #B54213;
+}
+
+h1 {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.infoSec p {
+  text-align: center;
+  border-radius: 5px;
+  background-color: #EFE3C6;
+  margin: 0 20% 20px 20%;
+  padding: 5px 0;
 }
 
 .statsSection {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-gap: 15px;
 }
 .statsSection ul {
   border: 2px solid blue;
   display: grid;
   list-style-type: none;
-  padding-left: 50px;
-}
-
-h1 {
-  color: blue;
+  padding-left: 0px;
 }
