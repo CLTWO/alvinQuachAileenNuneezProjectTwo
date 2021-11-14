@@ -24,6 +24,11 @@ basketApp.getPlayerInfo = function (datafromApi) {
   const playerObj = datafromApi.data;
   const statsPage = document.querySelector("#statsSection");
 
+  playerObj.sort(function (a, b) {
+    let x = a.id < b.id ? -1 : 1;
+    return x;
+  }).reverse()
+
 
   statsPage.textContent = "";
 
