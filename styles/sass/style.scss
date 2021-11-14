@@ -21,7 +21,14 @@ h1{
 footer{
     background-color: #EFE3C6;
     text-align: center;
+    padding:10px 0; 
+    i{
+        display: inline;
+    }
     a{
         text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: bold;
     }
 }

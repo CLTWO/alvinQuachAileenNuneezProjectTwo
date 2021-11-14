@@ -82,6 +82,11 @@ img {
 }
 .playerCards button:hover {
   opacity: 0.8;
+  color: #E47041;
+}
+
+.playerCards div:hover {
+  outline: 2px solid #E47041;
 }
 
 .giannis h3 {
@@ -97,6 +102,7 @@ img {
   grid-gap: 15px;
   grid-template-rows: 1fr;
   margin-bottom: 50px;
+  padding: 10px;
 }
 .statsSection ul {
   border: 2px solid black;
@@ -137,7 +143,14 @@ h1 {
 footer {
   background-color: #EFE3C6;
   text-align: center;
+  padding: 10px 0;
+}
+footer i {
+  display: inline;
 }
 footer a {
   text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
 }

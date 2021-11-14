@@ -29,12 +29,13 @@ img {
     }
     button:hover{
         opacity: 0.8;
+        color: #E47041;
     }
 }
 
-// .playerCards div:hover{
-//     border: 2px solid #E47041;
-// }
+.playerCards div:hover{
+    outline: 2px solid #E47041;
+}
 
 .giannis {
     h3{
