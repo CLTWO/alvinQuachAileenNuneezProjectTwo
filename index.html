@@ -6,95 +6,114 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Loopin Thru Hoops</title>
-  <link rel="stylesheet" href="./styles/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua&family=Montserrat&display=swap" rel="stylesheet">
   <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/pepsi-cyr-lat" type="text/css" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
     integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+  <link rel="stylesheet" href="./styles/style.css">
 </head>
 
 <body>
-  <main>
-    <section class="infoSec">
-      <h1>Loopin Thru Hoops</h1>
-      <p>Get your favorite player's game stats for the 2021-2022 NBA season by clicking on the Hoopin' 🏀 button below!
-      </p>
-    </section>
+  <!-- HEADER SECTION  -->
+  <header class="infoSec">
+    <h1>Loopin Thru Hoops</h1>
+    <p>Get your favorite player's game stats for the 2021-2022 NBA season
+      <span>by clicking on the Hoopin' 🏀 button below!</span>
+    </p>
+  </header>
+  <!-- HEADER SECTION  -->
+  <!-- PLAYER CARD SECTION  -->
+  <section class="playerCards">
+    <div class="lebron" id="player237">
+      <h3>Lebron James</h3>
+      <img src="./assets/lebronjames.png" alt="2021-2022 season headshot of basketball player Lebron James.">
+      <!-- team title will be entered dynamically in H4 -->
+      <h4></h4>
+      <button value="237">Hoopin' 🏀</button>
+    </div>
 
-    <section class="playerCards">
-      <!-- Creating player cards -->
-      <div id="player237">
-        <h3>Lebron James</h3>
-        <img src="./assets/lebronjames.png" alt="2021-2022 season headshot of basketball player Lebron James.">
-        <h4></h4>
-        <button value="237">Hoopin' 🏀</button>
-      </div>
-      <div id="player115">
-        <h3>Steph Curry</h3>
-        <img src="./assets/stephcurry.png" alt="2021-2022 season headshot of basketball player Steph Curry.">
-        <h4></h4>
-        <button value="115">Hoopin' 🏀</button>
-      </div>
-      <div id="player140">
-        <h3>Kevin Durant</h3>
-        <img src="./assets/kevindurant.png" alt="2021-2022 season headshot of basketball player Kevin Durant.">
-        <h4></h4>
-        <button value="140">Hoopin' 🏀</button>
-      </div>
-      <div id="player246">
-        <h3>Nikola Jokic</h3>
-        <img src="./assets/nikolajokic.png" alt="2021-2022 season headshot of basketball player Nikola Jokic.">
-        <h4></h4>
-        <button value="246">Hoopin' 🏀</button>
-      </div>
-      <div id="player666786">
-        <h3>Ja Morant</h3>
-        <img src="./assets/jamorant.png" alt="2021-2022 season headshot of basketball player Ja Morant.">
-        <h4></h4>
-        <button value="666786">Hoopin' 🏀</button>
-      </div>
-      <div id="player192">
-        <h3>James Harden</h3>
-        <img src="./assets/jamesharden.png" alt="2021-2022 season headshot of basketball player James Harden.">
-        <h4></h4>
-        <button value="192">Hoopin' 🏀</button>
-      </div>
-      <div class="giannis" id="player15">
-        <h3>Giannis <span>Antetokounmpo</span></h3>
-        <img src="./assets/giannisantetokounmpo.png"
-          alt="2021-2022 season headshot of basketball player Giannis Antetokounmpo.">
-        <h4></h4>
-        <button value="15">Hoopin' 🏀</button>
-      </div>
-      <div id="player278">
-        <h3>Damian Lillard</h3>
-        <img src="./assets/damianlillard.png" alt="2021-2022 season headshot of basketball player Damian Lillard.">
-        <h4></h4>
-        <button value="278">Hoopin' 🏀</button>
-      </div>
-      <div id="player57">
-        <h3>Devin Booker</h3>
-        <img src="./assets/devinbooker.png" alt="2021-2022 season headshot of basketball player Devin Booker.">
-        <h4></h4>
-        <button value="57">Hoopin' 🏀</button>
-      </div>
-      <div id="player132">
-        <h3>Luka Doncic</h3>
-        <img src="./assets/lukadoncic.png" alt="2021-2022 season headshot of basketball player Luka Doncic.">
-        <h4></h4>
-        <button value="132">Hoopin' 🏀</button>
-      </div>
-    </section>
+    <div id="player115">
+      <h3>Steph Curry</h3>
+      <img src="./assets/stephcurry.png" alt="2021-2022 season headshot of basketball player Steph Curry.">
+      <!-- team title will be entered dynamically in H4 -->
+      <h4></h4>
+      <button value="115">Hoopin' 🏀</button>
+    </div>
 
-    <section id="statsSection" class="statsSection">
-      <!-- Results Information here -->
-    </section>
+    <div id="player140">
+      <h3>Kevin Durant</h3>
+      <img src="./assets/kevindurant.png" alt="2021-2022 season headshot of basketball player Kevin Durant.">
+      <!-- team title will be entered dynamically in H4 -->
+      <h4></h4>
+      <button value="140">Hoopin' 🏀</button>
+    </div>
+
+    <div id="player246">
+      <h3>Nikola Jokic</h3>
+      <img src="./assets/nikolajokic.png" alt="2021-2022 season headshot of basketball player Nikola Jokic.">
+      <!-- team title will be entered dynamically in H4 -->
+      <h4></h4>
+      <button value="246">Hoopin' 🏀</button>
+    </div>
+
+    <div id="player666786">
+      <h3>Ja Morant</h3>
+      <img src="./assets/jamorant.png" alt="2021-2022 season headshot of basketball player Ja Morant.">
+      <!-- team title will be entered dynamically in H4 -->
+      <h4></h4>
+      <button value="666786">Hoopin' 🏀</button>
+    </div>
+
+    <div id="player192">
+      <h3>James Harden</h3>
+      <img src="./assets/jamesharden.png" alt="2021-2022 season headshot of basketball player James Harden.">
+      <!-- team title will be entered dynamically in H4 -->
+      <h4></h4>
+      <button value="192">Hoopin' 🏀</button>
+    </div>
+
+    <div class="giannis" id="player15">
+      <h3>Giannis <span>Antetokounmpo</span></h3>
+      <img src="./assets/giannisantetokounmpo.png"
+        alt="2021-2022 season headshot of basketball player Giannis Antetokounmpo.">
+      <!-- team title will be entered dynamically in H4 -->
+      <h4></h4>
+      <button value="15">Hoopin' 🏀</button>
+    </div>
+
+    <div id="player278">
+      <h3>Damian Lillard</h3>
+      <img src="./assets/damianlillard.png" alt="2021-2022 season headshot of basketball player Damian Lillard.">
+      <!-- team title will be entered dynamically in H4 -->
+      <h4></h4>
+      <button value="278">Hoopin' 🏀</button>
+    </div>
+
+    <div id="player57">
+      <h3>Devin Booker</h3>
+      <img src="./assets/devinbooker.png" alt="2021-2022 season headshot of basketball player Devin Booker.">
+      <!-- team title will be entered dynamically in H4 -->
+      <h4></h4>
+      <button value="57">Hoopin' 🏀</button>
+    </div>
+
+    <div id="player132">
+      <h3>Luka Doncic</h3>
+      <img src="./assets/lukadoncic.png" alt="2021-2022 season headshot of basketball player Luka Doncic.">
+      <!-- team title will be entered dynamically in H4 -->
+      <h4></h4>
+      <button value="132">Hoopin' 🏀</button>
+    </div>
+  </section>
+  <!-- PLAYER CARD SECTION  -->
+
+  <section id="statsSection" class="statsSection">
+    <!-- Players stats pulled from API will go here -->
+  </section>
   </main>
   <footer>
-    <i class="fas fa-spin fa-basketball-ball"></i>
-    <a href="https://junocollege.com/">Created at Juno College©</a>
+    <i aria-label="Spinning Basketball Icon" class="fas fa-spin fa-basketball-ball"></i>
+    <a aria-label="Link to Juno College of Technology Website" href="https://junocollege.com/">Created at Juno
+      College©</a>
   </footer>
   <script src="./script.js"></script>
 </body>

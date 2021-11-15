@@ -24,26 +24,28 @@ basketApp.getPlayerInfo = function (datafromApi) {
   const playerObj = datafromApi.data;
   const statsPage = document.querySelector("#statsSection");
 
+  //sort game stats from last to first 
   playerObj.sort(function (a, b) {
     let x = a.id < b.id ? -1 : 1;
     return x;
   }).reverse()
 
-
+  //empty stats container before next button click
   statsPage.textContent = "";
 
-  const allH4 = document.querySelectorAll('h4') // returns an array
+  // empty team title before next button click 
+  const allH4 = document.querySelectorAll('h4')
   allH4.forEach(item => {
     item.textContent = ''
   })
 
   playerObj.forEach(function (playerStats) {
     const playerId = playerStats.player.id;
-    // console.log(playerStats.player.id);
     //creating elements out of our data to append to a page
     const teamTitle = document.querySelector(`#player${playerId} h4`);
     teamTitle.textContent = playerStats.team.full_name;
 
+    //reformat date data from API 
     const gameDate = document.createElement("li");
     const uglyDateString = `${playerStats.game.date}`;
     const date = new Date(uglyDateString);
@@ -66,10 +68,8 @@ basketApp.getPlayerInfo = function (datafromApi) {
     const playerBlocks = document.createElement("li");
     playerBlocks.innerHTML = `<p>Blocks:${playerStats.blk}</p>`;
 
-    //appending elements to document
+    //appending JS elements to web page 
     const gameStats = document.createElement("ul");
-
-
 
     gameStats.appendChild(gameDate);
     gameStats.appendChild(playerPoints);
@@ -78,17 +78,18 @@ basketApp.getPlayerInfo = function (datafromApi) {
     gameStats.appendChild(playerSteals);
     gameStats.appendChild(playerBlocks);
     statsPage.appendChild(gameStats);
-
-
   });
 };
 
+//event listener listening for user click to display data
 basketApp.setupEventListener = function () {
   const buttons = document.querySelectorAll("button");
   buttons.forEach(function (individualButton) {
     individualButton.addEventListener("click", function (event) {
       const userInput = this.value;
       basketApp.getStats(userInput);
+      //navigate user to stats section upon click 
+      document.getElementById("statsSection").scrollIntoView({ behavior: 'smooth' })
     });
   });
 };

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Monoton&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 body {
   font-family: "Roboto", sans-serif;
 }
@@ -7,15 +7,19 @@ h1 {
   font-family: "PepsiCyrLatRegular";
   font-weight: normal;
   font-style: normal;
-  font-size: 50px;
+  font-size: 65px;
   color: white;
   text-shadow: -5px 2px 2px black;
   text-transform: none;
 }
 
+.infoSec span {
+  display: inline-block;
+}
 .infoSec p {
   text-transform: uppercase;
   font-weight: bold;
+  font-size: 1.2rem;
 }
 
 .playerCards {
@@ -42,8 +46,8 @@ footer a {
 }
 
 img {
-  height: 50%;
-  width: 70%;
+  height: 200px;
+  width: 300px;
 }
 
 .playerCards {
@@ -82,7 +86,7 @@ img {
 }
 .playerCards button:hover {
   opacity: 0.8;
-  color: #E47041;
+  color: #B54213;
 }
 
 .playerCards div:hover {
@@ -94,6 +98,13 @@ img {
 }
 .giannis span {
   display: block;
+}
+.giannis img {
+  width: 250px;
+}
+
+.lebron img {
+  width: 250px;
 }
 
 .statsSection {
@@ -136,8 +147,8 @@ h1 {
   text-align: center;
   border-radius: 5px;
   background-color: #EFE3C6;
-  margin: 0 20% 20px 20%;
-  padding: 5px 0;
+  margin: 0 5% 20px 5%;
+  padding: 15px 10px;
 }
 
 footer {

@@ -1,7 +1,9 @@
 
 img {
-    height: 50%;
-    width: 70%;
+    // height: 50%;
+    // width: 70%;
+    height: 200px; 
+    width: 300px;
 }
 .playerCards {
     display: grid;
@@ -29,7 +31,7 @@ img {
     }
     button:hover{
         opacity: 0.8;
-        color: #E47041;
+        color: #B54213;
     }
 }
 
@@ -43,5 +45,14 @@ img {
     }
     span{
     display: block;
+    }
+    img{
+        width:250px; 
+    }
+}
+
+.lebron{
+    img{
+        width: 250px;
     }
 }
