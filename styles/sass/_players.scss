@@ -1,7 +1,5 @@
-
+/*Styling for NBA player cards*/
 img {
-    // height: 50%;
-    // width: 70%;
     height: 200px; 
     width: 300px;
 }
@@ -20,7 +18,7 @@ img {
         display: flex;
         flex-direction: column;
     }
-    button{
+    button {
         color: white;
         text-align: center;
         display: block;
@@ -29,30 +27,17 @@ img {
         border-radius: 10px;
         padding: 15px;
     }
-    button:hover{
-        opacity: 0.8;
-        color: #B54213;
-    }
 }
 
-.playerCards div:hover{
+.lebron img {
+    width: 250px;
+}
+
+.playerCards div:hover {
     outline: 2px solid #E47041;
 }
 
-.giannis {
-    h3{
-        text-align: center;
-    }
-    span{
-    display: block;
-    }
-    img{
-        width:250px; 
-    }
-}
-
-.lebron{
-    img{
-        width: 250px;
-    }
+.playerCards button:hover {
+    opacity: 0.8;
+    color: #B54213;
 }

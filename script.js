@@ -33,12 +33,13 @@ basketApp.getPlayerInfo = function (datafromApi) {
   //empty stats container before next button click
   statsPage.textContent = "";
 
-  // empty team title before next button click 
+  //empty team title before next button click 
   const allH4 = document.querySelectorAll('h4')
   allH4.forEach(item => {
     item.textContent = ''
   })
 
+  //creating function to iterate through each player object
   playerObj.forEach(function (playerStats) {
     const playerId = playerStats.player.id;
     //creating elements out of our data to append to a page
@@ -53,6 +54,7 @@ basketApp.getPlayerInfo = function (datafromApi) {
     const humanReadable = new Date(uglyDateString).toDateString();
     gameDate.innerHTML = `<p>Game date: ${humanReadable}</p>`;
 
+    //storing API data in variables to be appended
     const playerPoints = document.createElement("li");
     playerPoints.innerHTML = `<p>Points:${playerStats.pts}</p>`;
 
