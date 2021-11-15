@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import 'setup'; 
+@import 'typography';
+@import 'players'; 
+@import 'stats';
+
+body {
+    background-color: #B54213; 
+    margin: 0;
+}
+h1 {
+    margin: 0 auto;
+    text-align: center;
+}
+.infoSection p {
+    text-align: center;
+    border-radius: 5px;
+    background-color: #EFE3C6;
+    margin: 0 5% 1.25rem 5%;
+    padding: 0.1rem 0.625rem;
+}
+footer {
+    background-color: #EFE3C6;
+    text-align: center;
+    padding: 0.625rem 0; 
+    i { display: inline; }
+}

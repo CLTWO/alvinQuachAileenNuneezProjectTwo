@@ -1,0 +1,43 @@
+/*Styling for NBA player cards*/
+img {
+    height: 200px; 
+    width: 300px;
+}
+.playerCards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px; 
+    grid-auto-rows: 450px;
+    padding: 10px;
+    div {
+        border: 2px solid #E47041;
+        height: 430px;
+        border-radius: 10px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+    button {
+        color: white;
+        text-align: center;
+        display: block;
+        background-color: black;
+        border: none;
+        border-radius: 10px;
+        padding: 15px;
+    }
+}
+
+.lebron img {
+    width: 250px;
+}
+
+.playerCards div:hover {
+    outline: 2px solid #E47041;
+}
+
+.playerCards button:hover {
+    opacity: 0.8;
+    color: #B54213;
+}
